@@ -1,0 +1,40 @@
+<!--*// File: negocios.component.html */
+
+
+ Contenedor principal -->
+<div class="section">
+<h2 class="title text-center">Establecimientos cercanos</h2>
+
+
+<div class="grid">
+<ng-container *ngFor="let e of establecimientos">
+<div class="card-wrapper" role="button" tabindex="0" (click)="openDetail(e)" (keydown.enter)="openDetail(e)">
+<p-card class="card">
+<ng-template pTemplate="header">
+<div class="image-wrapper">
+    <img src="assets/img/barrios.jpg" alt="Logo" class="logo text-center "  />
+
+
+
+<p-badge class="status-badge" [value]="e.status" [severity]="e.status === 'Cerrado' ? 'danger' : 'success'"></p-badge>
+
+
+<button pButton icon="pi pi-heart" class="favorite-btn" pTooltip="Añadir a favoritos" (click)="toggleFavorite($event, e)"
+[ngClass]="{'fav': e.favorite}"></button>
+
+
+<button pButton icon="pi pi-map-marker" class="map-btn" pTooltip="Ver en mapa" (click)="$event.stopPropagation(); console.log('map', e)"></button>
+</div>
+</ng-template>
+
+
+<div class="card-body">
+<div class="card-title text-center mt-1 mb-1">{{ e.name }}</div>
+<div class="card-sub text-center"> <i class="pi pi-map-marker text-center"></i> {{ e.address }} </div>
+<div class="card-title text-center">{{ e.namebarrio }}</div>
+</div>
+</p-card>
+</div>
+</ng-container>
+</div>
+</div>

@@ -1,0 +1,143 @@
+/* CONTENEDOR DEL HEADER */
+.app-header {
+background: linear-gradient(100deg, rgb(2, 2, 125), rgb(153, 204, 51), rgb(2, 2, 125));
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: nowrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Opción 1: Gradiente horizontal (izquierda a derecha) 
+  background: linear-gradient(to right, rgb(2, 2, 125), rgb(153, 204, 51));*/
+  
+  /* Opción 2: Gradiente diagonal (descomentar para usar)
+  background: linear-gradient(135deg, rgb(2, 2, 125), rgb(153, 204, 51)); */
+  
+  /* Opción 3: Gradiente vertical (descomentar para usar)
+  background: linear-gradient(to bottom, rgb(2, 2, 125), rgb(153, 204, 51)); */
+  
+  /* Opción 4: Gradiente con punto medio (descomentar para usar)
+  background: linear-gradient(to right, rgb(2, 2, 125) 0%, rgb(77, 103, 88) 50%, rgb(153, 204, 51) 100%); */
+
+/* LOGO */
+.logo {
+  width: 140px;
+}
+
+/* NAV DESKTOP */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+/* LISTA DEL MENÚ */
+.app-header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* ITEMS */
+.app-header li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.app-header li a:hover,
+.app-header li a.active {
+  text-decoration: underline;
+}
+
+/* BOTÓN DE UBICACIÓN DESKTOP */
+.desktop-location-btn {
+  display: inline-flex;
+}
+
+/* HAMBURGUESA OCULTA POR DEFECTO */
+.menu-toggle {
+  display: none;
+  background: white !important;
+  color: rgb(2, 2, 125) !important;
+  border: none !important;
+}
+
+/* ESTILOS DEL DRAWER */
+.drawer-nav {
+  width: 100%;
+}
+
+.drawer-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.drawer-menu li {
+  margin-bottom: 0.5rem;
+}
+
+.drawer-menu li a {
+  display: block;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: #333;
+  border-radius: 4px;
+  transition: background 0.3s;
+  font-weight: 600;
+}
+
+.drawer-menu li a:hover,
+.drawer-menu li a.active {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+/* ------------------ RESPONSIVE ------------------ */
+@media (max-width: 900px) {
+
+  /* HAMBURGUESA VISIBLE */
+  .menu-toggle {
+    display: inline-flex !important;
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+
+  /* NAV OCULTO EN MÓVIL */
+  .desktop-nav {
+    display: none;
+  }
+
+  /* BOTÓN DE UBICACIÓN OCULTO EN MÓVIL */
+  .desktop-location-btn {
+    display: none;
+  }
+
+  /* Ajustar header en móvil */
+  .app-header {
+    padding: 10px 15px;
+    gap: 10px;
+  }
+}
+
+/* Responsive para el modal */
+@media (max-width: 768px) {
+  :host ::ng-deep .p-dialog {
+    width: 95% !important;
+    max-width: 650px;
+  }
+  .logo{
+    width: 80px;
+  }
+}

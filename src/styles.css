@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'primeflex/primeflex.css';
+@import 'primeicons/primeicons.css';
+@import "leaflet/dist/leaflet.css";
+
+
+/*
+  Sobrescribe las variables del tema de PrimeNG.
+  Esto debe ir DESPUÉS de la importación del tema en angular.json para que funcione.
+*/
+:root {
+  /* Paleta de Color Primario (Azul oscuro) */
+  --p-primary-50: #e6e6fA;
+  --p-primary-100: #b3b3f0;
+  --p-primary-200: #8080e6;
+  --p-primary-300: #4d4ddc;
+  --p-primary-400: #1a1ad2;
+  --p-primary-500: rgb(2, 2, 125); /* Tu color primario */
+  --p-primary-600: #02026f;
+  --p-primary-700: #010159;
+  --p-primary-800: #010143;
+  --p-primary-900: #00002d;
+  --p-primary-950: #00001f;
+
+  /* El color principal para componentes como botones */
+  --p-primary-color: var(--p-primary-500);
+
+  /* El color del texto sobre el color primario */
+  --p-primary-color-text: #ffffff;
+
+  /* Paleta de Color Secundario (Verde claro) */
+  --secondary-color: rgb(153, 204, 151);
+
+  /* Integración con el sistema de colores de PrimeNG (opcional, pero recomendado) */
+  /* Puedes usar "surface" para fondos de elementos, "text" para texto, etc. */
+  --p-highlight-bg: var(--p-primary-100);
+  --p-highlight-text-color: var(--p-primary-800);
+}

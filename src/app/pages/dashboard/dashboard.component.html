@@ -1,0 +1,35 @@
+<div class="dashboard-container" *ngIf="stats$ | async as stats">
+  <div class="info-container">
+    <div class="header text-center ">
+      <h1 class="title">Bienvenido a Tu Barrio</h1>
+      <p class="subtitle">Toda la información de tu localidad, en un solo lugar.</p>
+    </div>
+
+    <div class="stats-grid">
+      <p-card header="Negocios Registrados" class="stat-card">
+        <p class="stat-number">{{ stats.totalNegocios }}</p>
+      </p-card>
+      <p-card header="Barrios Disponibles" class="stat-card">
+        <p class="stat-number">{{ stats.totalBarrios }}</p>
+      </p-card>
+      <p-card header="Categorías" class="stat-card">
+        <p class="stat-number">{{ stats.totalCategorias }}</p>
+      </p-card>
+      <p-card header="Servicios Ofrecidos" class="stat-card">
+        <p class="stat-number">{{ stats.totalServicios }}</p>
+      </p-card>
+    </div>
+     <div class="flex items-center gap-4 justify-center lg:justify-start">
+                                <button pButton type="button" severity="info">
+                                    <span pButtonLabel>Learn More</span>
+                                </button>
+                                <button pButton type="button" severity="contrast" outlined>
+                                    <span pButtonLabel>Live Demo</span>
+                                </button>
+                            </div>
+  </div>
+
+  <div class="image-container">
+    <img src="assets/img/barrios.jpg" alt="Barrio de Bogotá" class="neighborhood-image">
+  </div>
+</div>

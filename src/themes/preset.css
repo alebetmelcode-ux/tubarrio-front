@@ -1,0 +1,109 @@
+
+:root {
+  /* ---------------------------------------------------------
+   * PRIMARY (Azul)
+   * --------------------------------------------------------- */
+  --primary-50: #e2e2f3;
+  --primary-100: #b7b7dc;
+  --primary-200: #8b8bc5;
+  --primary-300: #5f5fad;
+  --primary-400: #3b3b9a;
+  --primary-500: #02027D;  /* Principal */
+  --primary-600: #020270;
+  --primary-700: #02025f;
+  --primary-800: #02024f;
+  --primary-900: #01023a;
+
+  /* ---------------------------------------------------------
+   * SECONDARY (Verde)
+   * --------------------------------------------------------- */
+  --secondary-50: #f3f8e7;
+  --secondary-100: #e3efc3;
+  --secondary-200: #d2e79e;
+  --secondary-300: #c2df7a;
+  --secondary-400: #b3d85c;
+  --secondary-500: #99CC33; /* Principal */
+  --secondary-600: #8ab82e;
+  --secondary-700: #739d26;
+  --secondary-800: #5c801f;
+  --secondary-900: #425b16;
+
+  /* ---------------------------------------------------------
+   * SURFACES, BORDES Y BASE
+   * --------------------------------------------------------- */
+  --surface-0: #ffffff;
+  --surface-50: #f8f9fb;
+  --surface-100: #f1f3f6;
+  --surface-200: #e5e7eb;
+  --surface-300: #d4d6da;
+  --surface-400: #b5b7bc;
+  --surface-500: #8d9096;
+  --surface-600: #6c6f75;
+  --surface-700: #52555a;
+  --surface-800: #3a3d41;
+  --surface-900: #1f2125;
+
+  --border-color: #d9dbe0;
+  --focus-ring-color: var(--primary-400);
+
+  /* ---------------------------------------------------------
+   * TRANSICIONES Y DIMENSIONES
+   * --------------------------------------------------------- */
+  --transition-duration: 0.2s;
+  --mask-transition-duration: 0.3s;
+  --icon-size: 1rem;
+  --anchor-gutter: 2px;
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --padding-base-x: 0.75rem;
+  --padding-base-y: 0.625rem;
+  --padding-small-x: 0.625rem;
+  --padding-small-y: 0.5rem;
+  --padding-large-x: 0.875rem;
+  --padding-large-y: 0.75rem;
+  --font-size-small: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-large: 1.125rem;
+  --mask-bg: rgba(0,0,0,0.4);
+
+  /* ---------------------------------------------------------
+   * TIPOGRAFÍA
+   * --------------------------------------------------------- */
+  --font-family: 'Inter', sans-serif;
+  --text-color: var(--surface-700);
+  --text-hover-color: var(--surface-800);
+  --text-muted: var(--surface-500);
+  --text-hover-muted: var(--surface-600);
+
+  /* ---------------------------------------------------------
+   * ESTADOS DE BOTONES / INPUTS / ELEMENTOS
+   * --------------------------------------------------------- */
+  --primary-color: var(--primary-500);
+  --primary-color-text: #ffffff;
+  --primary-hover: var(--primary-600);
+  --primary-active: var(--primary-700);
+
+  --secondary-color: var(--secondary-500);
+  --secondary-color-text: #ffffff;
+  --secondary-hover: var(--secondary-400);
+  --secondary-active: var(--secondary-600);
+
+  --highlight-bg: var(--primary-50);
+  --highlight-color: var(--primary-700);
+  --highlight-focus-bg: var(--primary-100);
+  --highlight-focus-color: var(--primary-800);
+
+  --disabled-opacity: 0.6;
+  --disabled-bg: var(--surface-200);
+  --disabled-color: var(--surface-500);
+  --placeholder-color: var(--surface-500);
+  --invalid-border-color: #ef4444; /* rojo */
+  --invalid-placeholder-color: #b91c1c;
+
+  --shadow-none: none;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-md: 0 2px 12px rgba(0,0,0,0.1);
+  --shadow-lg: 0 1px 3px rgba(0,0,0,0.3);
+}
+    

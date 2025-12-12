@@ -1,0 +1,23 @@
+<!-- Botón para abrir el Drawer -->
+<button pButton icon="pi pi-bars"  severity="info"  (click)="visible = true" class="mt-3  p-button-icon"></button>
+
+<!-- Drawer PrimeNG -->
+<p-drawer [(visible)]="visible" position="left"  styleClass="p-drawer-sm">
+  <ng-template pTemplate="header">
+      <img src="assets/img/tb.jpg" alt="Logo" class="logo" style="width: 140px;" />
+
+  </ng-template>
+  <nav>
+    <ul class="menu">
+      <li><a routerLink="/dashboard" routerLinkActive="active" (click)="visible=false">Dashboard</a></li>
+      <li><a routerLink="/negocios" routerLinkActive="active" (click)="visible=false">Negocios</a></li>
+      <li><a routerLink="/barrios" routerLinkActive="active" (click)="visible=false">Barrios</a></li>
+      <li><a routerLink="/blog" routerLinkActive="active" (click)="visible=false">Blog</a></li>
+      <li><a routerLink="/categorias" routerLinkActive="active" (click)="visible=false">Categorias</a></li>
+      <li><a routerLink="/publicidad" routerLinkActive="active" (click)="visible=false">Publicidad</a></li>
+      <li><a routerLink="/servicios" routerLinkActive="active" (click)="visible=false">Servicios</a></li>
+      <li><a routerLink="/usuarios" routerLinkActive="active" (click)="visible=false">Usuarios</a></li>
+    </ul>
+  </nav>
+</p-drawer>
+

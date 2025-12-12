@@ -1,0 +1,31 @@
+<div class="category-wrap">
+  
+  <!-- Botón Izquierda -->
+  <button
+    pButton
+    type="button"
+    icon="pi pi-chevron-left"
+    class="nav-btn left"
+    (click)="scrollLeft(track)">
+  </button>
+
+  <!-- Carril -->
+  <div #track class="category-track" role="list">
+    <div class="category-item" *ngFor="let c of categories" role="listitem" pTooltip="{{ c.label }}">
+      <div class="icon-bg">
+        <img [src]="c.img" [alt]="c.label" />
+      </div>
+      <div class="label">{{ c.label }}</div>
+    </div>
+  </div>
+
+  <!-- Botón Derecha -->
+  <button
+    pButton
+    type="button"
+    icon="pi pi-chevron-right"
+    class="nav-btn right"
+    (click)="scrollRight(track)">
+  </button>
+
+</div>
