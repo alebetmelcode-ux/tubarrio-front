@@ -1,31 +1,21 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { CommonModule } from "@angular/common";
+import { FormsModule } from "@angular/forms";
+import { RouterModule } from "@angular/router";
+import { Component, ElementRef, ViewChild } from "@angular/core";
+import * as L from "leaflet";
+import { DialogModule } from "primeng/dialog";
+import { ButtonModule } from "primeng/button";
+import { InputTextModule } from "primeng/inputtext";
+import { AvatarModule } from "primeng/avatar";
 
-// Angular
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-
-// PrimeNG
-import { DialogModule } from 'primeng/dialog';
-import { ButtonModule } from 'primeng/button';
-import { InputTextModule } from 'primeng/inputtext';
-import { Toolbar } from 'primeng/toolbar';
-import { AvatarModule } from 'primeng/avatar';
-import { SharedModule } from 'primeng/api';
-
-
-
-// Router
-import { Router, RouterModule } from '@angular/router';
-
-// Leaflet
-import * as L from 'leaflet';
-
-// Componentes propios
-import { FiltroComponent } from '../filtro/filtro.component';
+import { FiltroComponent } from "../filtro/filtro.component";
 import { Drawer } from "primeng/drawer";
+import { Router } from "@angular/router";
 
-
-
+interface NavItem {
+  path: string;
+  label: string;
+}
 
 @Component({
   selector: 'app-header',
@@ -39,7 +29,7 @@ import { Drawer } from "primeng/drawer";
     DialogModule,
     ButtonModule,
     InputTextModule,
-    AvatarModule, SharedModule,
+    AvatarModule, 
     FiltroComponent,
     Drawer,
     
@@ -63,6 +53,18 @@ export class HeaderComponent {
 menuOpen: any;
 user: any;
 visible: any;
+
+  // New: Consolidated Navigation Items
+  navItems: NavItem[] = [
+    { path: '/dashboard', label: 'Dashboard' },
+    { path: '/negocios', label: 'Negocios' },
+    { path: '/barrios', label: 'Barrios' },
+    { path: '/blog', label: 'Blog' },
+    { path: '/categorias', label: 'Categorias' },
+    { path: '/publicidad', label: 'Publicidad' },
+    { path: '/servicios', label: 'Servicios' },
+    { path: '/usuarios', label: 'Usuarios' },
+  ];
 
   constructor(private router: Router) {}
 

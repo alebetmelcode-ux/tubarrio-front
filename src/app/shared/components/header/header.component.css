@@ -1,6 +1,6 @@
 /* CONTENEDOR DEL HEADER */
 .app-header {
-background: linear-gradient(100deg, rgb(2, 2, 125), rgb(153, 204, 51), rgb(2, 2, 125));
+background: linear-gradient(100deg, var(--primary-500), var(--secondary-500), var(--primary-500));
   color: white;
   padding: 10px 20px;
   display: flex;

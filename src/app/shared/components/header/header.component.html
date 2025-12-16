@@ -3,7 +3,7 @@
 
     
   <!-- Logo -->
-  <img src="assets/img/tb3.png" alt="Logo" class="logo" />
+  <img src="assets/img/tb3.png" alt="Logo de la aplicación TB-FRONTEND" class="logo" />
   
   <!-- Filtro -->
   <app-filtro ></app-filtro>
@@ -11,14 +11,9 @@
   <!-- Menú de navegación (solo visible en desktop) -->
   <nav class="desktop-nav">
     <ul>
-      <li><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
-      <li><a routerLink="/negocios" routerLinkActive="active">Negocios</a></li>
-      <li><a routerLink="/barrios" routerLinkActive="active">Barrios</a></li>
-      <li><a routerLink="/blog" routerLinkActive="active">Blog</a></li>
-      <li><a routerLink="/categorias" routerLinkActive="active">Categorias</a></li>
-      <li><a routerLink="/publicidad" routerLinkActive="active">Publicidad</a></li>
-      <li><a routerLink="/servicios" routerLinkActive="active">Servicios</a></li>
-      <li><a routerLink="/usuarios" routerLinkActive="active">Usuarios</a></li>
+      <li *ngFor="let item of navItems">
+        <a [routerLink]="item.path" routerLinkActive="active">{{ item.label }}</a>
+      </li>
     </ul>
   </nav>
 
@@ -45,9 +40,8 @@
 
 <!-- Drawer para móvil -->
 <p-drawer [(visible)]="visible" position="left" styleClass="p-drawer-sm">
-  <ng-template pTemplate="header">
-    <img src="assets/img/tb.jpg" alt="Logo" class="logo" style="width: 140px;" />
-  </ng-template>
+    <ng-template pTemplate="header">
+      <img src="assets/img/tb.jpg" alt="Logo de la aplicación TB-FRONTEND" class="logo" style="width: 140px;" />  </ng-template>
   
   <!-- Botón Definir Ubicación dentro del drawer -->
   <button
@@ -62,14 +56,9 @@
   <!-- Menú de navegación -->
   <nav class="drawer-nav">
     <ul class="drawer-menu">
-      <li><a routerLink="/dashboard" routerLinkActive="active" (click)="visible=false">Dashboard</a></li>
-      <li><a routerLink="/negocios" routerLinkActive="active" (click)="visible=false">Negocios</a></li>
-      <li><a routerLink="/barrios" routerLinkActive="active" (click)="visible=false">Barrios</a></li>
-      <li><a routerLink="/blog" routerLinkActive="active" (click)="visible=false">Blog</a></li>
-      <li><a routerLink="/categorias" routerLinkActive="active" (click)="visible=false">Categorias</a></li>
-      <li><a routerLink="/publicidad" routerLinkActive="active" (click)="visible=false">Publicidad</a></li>
-      <li><a routerLink="/servicios" routerLinkActive="active" (click)="visible=false">Servicios</a></li>
-      <li><a routerLink="/usuarios" routerLinkActive="active" (click)="visible=false">Usuarios</a></li>
+      <li *ngFor="let item of navItems">
+        <a [routerLink]="item.path" routerLinkActive="active" (click)="visible=false">{{ item.label }}</a>
+      </li>
     </ul>
   </nav>
 </p-drawer>

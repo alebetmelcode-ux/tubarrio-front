@@ -10,30 +10,35 @@
   Esto debe ir DESPUÉS de la importación del tema en angular.json para que funcione.
 */
 :root {
-  /* Paleta de Color Primario (Azul oscuro) */
-  --p-primary-50: #e6e6fA;
-  --p-primary-100: #b3b3f0;
-  --p-primary-200: #8080e6;
-  --p-primary-300: #4d4ddc;
-  --p-primary-400: #1a1ad2;
-  --p-primary-500: rgb(2, 2, 125); /* Tu color primario */
-  --p-primary-600: #02026f;
-  --p-primary-700: #010159;
-  --p-primary-800: #010143;
-  --p-primary-900: #00002d;
-  --p-primary-950: #00001f;
+  /*
+    Mapeo de variables de preset.css a las variables de tema de PrimeNG.
+    Esto debe ir DESPUÉS de la importación del tema de PrimeNG y de preset.css.
+  */
+
+  /* Colores Primarios (Basados en preset.css --primary-*) */
+  --p-primary-50: var(--primary-50);
+  --p-primary-100: var(--primary-100);
+  --p-primary-200: var(--primary-200);
+  --p-primary-300: var(--primary-300);
+  --p-primary-400: var(--primary-400);
+  --p-primary-500: var(--primary-500);
+  --p-primary-600: var(--primary-600);
+  --p-primary-700: var(--primary-700);
+  --p-primary-800: var(--primary-800);
+  --p-primary-900: var(--primary-900);
+  --p-primary-950: var(--primary-900); /* preset.css no tiene 950, usar 900 como fallback o definir */
+
 
   /* El color principal para componentes como botones */
-  --p-primary-color: var(--p-primary-500);
+  --p-primary-color: var(--primary-500);
 
   /* El color del texto sobre el color primario */
-  --p-primary-color-text: #ffffff;
+  --p-primary-color-text: var(--primary-color-text); /* De preset.css, que es #ffffff */
 
-  /* Paleta de Color Secundario (Verde claro) */
-  --secondary-color: rgb(153, 204, 151);
+  /* Paleta de Color Secundario (Basado en preset.css --secondary-*) */
+  --secondary-color: var(--secondary-500); /* Ahora usa el secondary-500 de preset.css */
 
   /* Integración con el sistema de colores de PrimeNG (opcional, pero recomendado) */
-  /* Puedes usar "surface" para fondos de elementos, "text" para texto, etc. */
-  --p-highlight-bg: var(--p-primary-100);
-  --p-highlight-text-color: var(--p-primary-800);
+  --p-highlight-bg: var(--primary-100); /* Usa primary-100 de preset.css */
+  --p-highlight-text-color: var(--primary-800); /* Usa primary-800 de preset.css */
 }
