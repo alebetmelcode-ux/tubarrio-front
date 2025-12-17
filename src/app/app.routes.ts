@@ -1,12 +1,15 @@
 import { Routes } from '@angular/router';
 import { LayoutComponent } from './shared/components/layout/layout.component';
+import { authGuard } from './core/guards/auth.guard';
+import { LoginComponent } from './pages/login/login.component';
 
 export const routes: Routes = [
-  // Redirige la ruta raíz a 'dashboard'
+  { path: 'login', component: LoginComponent },
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   {
-    path: '', // Ruta base para el layout principal
+    path: '',
     component: LayoutComponent,
+    canActivate: [authGuard],
     children: [
       {
         path: 'dashboard',
@@ -24,11 +27,11 @@ export const routes: Routes = [
         path: 'blog',
         children: [
           {
-            path: '', // Ruta para la lista de blogs
+            path: '',
             loadComponent: () => import('./pages/blog/blog-list/blog-list.component').then(m => m.BlogListComponent)
           },
           {
-            path: ':id', // Ruta para el detalle del blog
+            path: ':id',
             loadComponent: () => import('./pages/blog/blog-detail/blog-detail.component').then(m => m.BlogDetailComponent)
           }
         ]
@@ -51,6 +54,5 @@ export const routes: Routes = [
       },
     ]
   },
-  // Ruta wildcard para cualquier ruta no encontrada, redirige a dashboard
   { path: '**', redirectTo: 'dashboard' }
 ];

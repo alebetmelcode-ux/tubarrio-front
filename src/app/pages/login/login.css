@@ -1,0 +1,146 @@
+/* Estilos generales del contenedor de la página de login */
+.login-page-container {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, var(--primary-800, #02024f), var(--primary-100, #02024f));
+}
+
+/* Media queries para padding responsivo */
+@media (min-width: 768px) {
+  .login-page-container {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .login-page-container {
+    padding-left: 20rem;
+    padding-right: 20rem;
+  }
+}
+
+/* Tarjeta de login */
+.login-card {
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+  max-width: 24rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  backdrop-filter: blur(16px);
+}
+
+/* Contenedor del logo y título */
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+/* Estilo para el logo */
+.login-logo {
+  width: 180px;
+  height: auto;
+  
+}
+
+/* Título y subtítulo */
+.welcome-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  text-align: center;
+}
+
+.welcome-title {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.welcome-subtitle {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.signup-link {
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.signup-link:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Formulario */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.inputs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* Iconos de PrimeNG */
+.custom-input-icon {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Inputs de PrimeNG */
+.custom-input-text {
+  appearance: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  width: 100% !important;
+  outline: 0 !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+  border-radius: 1.5rem !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+.custom-input-text::placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Botón de login */
+.login-button {
+  width: 100% !important;
+  border-radius: 1.5rem !important;
+  background-color: var(--secondary-500, #99CC33) !important;
+  border: 1px solid var(--secondary-500, #99CC33) !important;
+  color: var(--surface-900, #1f2125) !important;
+  font-weight: bold;
+}
+
+.login-button:hover {
+  background-color: var(--secondary-600, #8ab82e) !important;
+  border-color: var(--secondary-600, #8ab82e) !important;
+}
+
+/* Enlace de contraseña olvidada */
+.forgot-password-link {
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+
+.forgot-password-link:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
