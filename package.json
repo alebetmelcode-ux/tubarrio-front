@@ -35,7 +35,7 @@
     "leaflet-defaulticon-compatibility": "^0.1.2",
     "primeflex": "^4.0.0",
     "primeicons": "^7.0.0",
-    "primeng": "^21.0.1",
+    "primeng": "^21.0.2",
     "rxjs": "~7.8.0",
     "tailwindcss-primeui": "^0.6.1",
     "tslib": "^2.3.0"
