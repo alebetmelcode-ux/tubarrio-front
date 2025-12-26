@@ -1,0 +1,47 @@
+/* src/themes/dark-theme.css */
+
+.dark {
+  /* ---------------------------------------------------------
+   * SURFACES, BORDES Y BASE (Modo Oscuro)
+   * --------------------------------------------------------- */
+  --surface-0: #1f2125;   /* Invertido de --surface-900 */
+  --surface-50: #3a3d41; /* Invertido de --surface-800 */
+  --surface-100: #52555a;/* Invertido de --surface-700 */
+  --surface-200: #6c6f75;/* Invertido de --surface-600 */
+  --surface-300: #8d9096;/* Invertido de --surface-500 */
+  --surface-400: #b5b7bc;/* Invertido de --surface-400 */
+  --surface-500: #d4d6da;/* Invertido de --surface-300 */
+  --surface-600: #e5e7eb;/* Invertido de --surface-200 */
+  --surface-700: #f1f3f6;/* Invertido de --surface-100 */
+  --surface-800: #f8f9fb;/* Invertido de --surface-50 */
+  --surface-900: #ffffff;/* Invertido de --surface-0 */
+
+  --border-color: #52555a; /* Un borde más oscuro que en modo claro */
+
+  /* ---------------------------------------------------------
+   * TIPOGRAFÍA (Modo Oscuro)
+   * --------------------------------------------------------- */
+  --text-color: var(--surface-100);
+  --text-hover-color: var(--surface-0);
+  --text-muted: var(--surface-400);
+  --text-hover-muted: var(--surface-300);
+
+  /* ---------------------------------------------------------
+   * ESTADOS DE BOTONES / INPUTS (Modo Oscuro)
+   * --------------------------------------------------------- */
+  --highlight-bg: rgba(var(--primary-400), 0.2);
+  --highlight-color: var(--primary-200);
+  --highlight-focus-bg: rgba(var(--primary-400), 0.3);
+
+  --disabled-bg: var(--surface-700);
+  --disabled-color: var(--surface-500);
+  --placeholder-color: var(--surface-500);
+  --invalid-border-color: #ff8a80;
+
+  /* ---------------------------------------------------------
+   * SOMBRAS (Modo Oscuro)
+   * --------------------------------------------------------- */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.5);
+  --shadow-md: 0 2px 12px rgba(0,0,0,0.5);
+  --shadow-lg: 0 1px 3px rgba(0,0,0,0.7);
+}
