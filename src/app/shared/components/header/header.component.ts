@@ -62,7 +62,7 @@ visible: any;
     { path: '/blog', label: 'Blog' },
     { path: '/categorias', label: 'Categorias' },
     { path: '/publicidad', label: 'Publicidad' },
-    { path: '/servicios', label: 'Servicios' },
+    { path: '/servicios', label: 'Servicios Profesionales' },
     { path: '/usuarios', label: 'Usuarios' },
   ];
 
